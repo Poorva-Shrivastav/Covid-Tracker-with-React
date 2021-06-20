@@ -27,7 +27,7 @@ function Home() {
 
     return (
         <div>
-            <h1>Corona Tracker</h1>
+            <h1>Covid Tracker</h1>
             <div>
                 <div className="cases-container">
                     <h3>Country : {selectedCountry.country} </h3>
