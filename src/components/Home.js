@@ -42,15 +42,25 @@ function Home() {
                 <h2>Select Country name</h2>
 
                 {   
-                    data && data.map(item => (
-                        <select
-                        /* <option className="country-name" onChange={() => {selectCountryHandler(item.country)}}>{item.country}</option> */
+                    // data && data.map(item => (
+                    //     <select
+                    //     /* <option className="country-name" onChange={() => {selectCountryHandler(item.country)}}>{item.country}</option> */
                     
-                         onClick={() => {selectCountryHandler(item.country)}}>
-                             <option className="country-name">{item.country}</option> 
-                        </select>
+                    //      onClick={() => {selectCountryHandler(item.country)}}>
+                    //          <option className="country-name">{item.country}</option> 
+                    //     </select>
                         
-                    ) )
+                    // ) )
+                    
+                }
+                {
+                    data && 
+                        <select onChange={(e) =>{selectCountryHandler(e.target.value)}}>
+                         {data.map(item =>(
+                             <option className="country-name" value={item.country}>{item.country}</option>
+                         ))}
+                    
+                        </select>
                 }
             
             </div>
